@@ -1,0 +1,21 @@
+{
+    "name": "djibril/projetpoo",
+    "autoload": {
+        "psr-4": {
+            "Djibril\\Projetpoo\\": "src/",
+            "App\\Core\\": "core/",
+            "App\\Model\\": "models/",
+            "App\\Controller\\": "controllers/",
+            "App\\exceptions\\": "exceptions/"
+
+            
+        }
+    },
+    "authors": [
+        {
+            "name": "sondji11",
+            "email": "djibril.ndiaye14@gmail.com"
+        }
+    ],
+    "require": {}
+}
