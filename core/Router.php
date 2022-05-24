@@ -51,7 +51,7 @@ class Router{
             }else{
                 $obj = new SecuriteController($this->request);
                 call_user_func(array($obj,"authentification"));
-                // throw new RouteNotFoundException();
+                throw new RouteNotFoundException();
             }
     }
 }

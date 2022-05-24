@@ -76,11 +76,34 @@ abstract class User extends Personne
     //     return $this;
     // }
 
-    public static function findAll(): array
-    {   
-        $sql="select *from ".parent::table(). " where role like 'ROLE_PROFESSEUR'";
-        return parent::findBy($sql);
+   
+    public static function findUserByLoginAndPassword(string $login,string $password):object|null|array{
+        //dd("in login and pass");
+        return parent::findBy("select * from personne where login=? and password=?",[$login,$password]);
     }
 
+
+    public  static function findAll():array{
+        
+        $db=self::database();
+        
+        $db->ConnexionBd();
+         
+        $sql="select * from ".parent::table()."where role not like 'ROLE_PROFESSEUR'";
+  
+       
+        
+        $results=$db->ExecuteSelect($sql);
+  
+      //  die('in All');
+  
+        
+  
+        $db->CloseConnexion();
+            
+        
+        return $results;
+    }
+  
 
 }

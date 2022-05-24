@@ -12,13 +12,14 @@ class DemandeController extends Controller{
     }
     public function listerdemande(){
 
-        // die('ok');
 
        
         if($this->request->isGet()){   
 
 
-            $this->render('module/listerdemande.html.php');
+            $this->render('demande/listerdemande.html.php');
+        // die('ok');
+
         }
 
     }

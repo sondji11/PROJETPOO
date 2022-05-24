@@ -35,11 +35,11 @@ namespace App\Core;
            
             $query=$this->pdo->prepare($sql); 
 
-            //dd($query);
+            // dd($query);
             
             $query->execute($data);  
             
-            //die('in select'); 
+            // die('in select'); 
 
             if($single)
             {

@@ -22,8 +22,10 @@
          </form>
         </p>
     </div>
-</div> -->
- <style>
+    
+</div> 
+
+ <!-- <style>
          *{
             font-family:arial;
          }
@@ -47,10 +49,13 @@
    <div class="erreur">
                 <h1>Authentification</h1>
       
-                <form name="fo" method="post" action="http://localhost:8002/">
+                <form name="fo" method="post" action="http://localhost:8001/">
                     
                     <input class="input" type="text" name="login" placeholder="Login" /><br />
                     <input class="input" type="password" name="password" placeholder="Mot de passe" /><br />
                     <input type="submit" name="valider" value="S'authentifier" />
                 </form>
-    </div>
+    </div> -->
+
+
+   

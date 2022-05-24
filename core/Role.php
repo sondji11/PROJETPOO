@@ -11,13 +11,16 @@ class Role{
     public  static function isconnect(){
 
     }
-    public  static function isRP(){
+    public  static function isRP():bool{
+        return self::isconnect() && $_SESSION['user_connect']['role']=='ROLE_RP';
+    }
+    public  static function isAC():bool{
+        return self::isconnect() && $_SESSION['user_connect']['role']=='ROLE_AC';
 
     }
-    public  static function isAC(){
+    public  static function isEtudinat():bool{
+        return self::isconnect() && $_SESSION['user_connect']['role']=='ROLE_ETUDIANT';
 
-    }
-    public  static function isEtudinat(){
 
     }
 }

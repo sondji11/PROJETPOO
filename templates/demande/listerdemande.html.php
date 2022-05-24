@@ -6,11 +6,15 @@ $demande= demande::findAll();
 
 
 ?>
+    <h1>LISTE DES DEMANDES</h1>
+
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>etat</th>
-           
+            <th>Etat</th>
+            <th>Motif</th>
+            <th>Date</th>
+
         </tr>
     </thead>
     <tbody>
@@ -19,6 +23,10 @@ $demande= demande::findAll();
         {
             echo "<tr>";
             echo "<td>".$demande->etat."</td>";
+            echo "<td>".$demande->motif."</td>";
+            echo "<td>".$demande->date."</td>";
+
+
            
         
 

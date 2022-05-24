@@ -2,8 +2,9 @@
 
 namespace App\Model;
 
+use App\Core\Model;
 
-class Demande
+class Demande extends Model
 {
     private string $etat;
     private string $motif;

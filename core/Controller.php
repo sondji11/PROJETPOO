@@ -1,7 +1,6 @@
 <?php
 namespace App\Core;
 
-
 class Controller  {
 
     protected Request $Request;
@@ -10,23 +9,14 @@ class Controller  {
         $this->request=$request;
     }
     public function render(string $path,array $data=[]){
-
-       
         $data["Constantes"]=Constantes::class;
         $data["request"]=$this->request;
         ob_start();
         extract($data);
-        
-        
-        // echo Constantes::ROOT()."/templates/".$path;die;
         require_once(Constantes::ROOT()."templates/".$path);
-        
         $content_for_views=ob_get_clean();
-        
         // var_dump(Constantes::ROOT());die;
         require_once(Constantes::ROOT()."templates/layout/base.html.php");
-
-        
 
     }
     public function redirecToRoute($uri){

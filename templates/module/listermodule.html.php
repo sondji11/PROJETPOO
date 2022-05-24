@@ -6,6 +6,8 @@ $module= module::findAll();
 
 
 ?>
+    <h1>LISTE DES MODULES</h1>
+
 <table class="table table-hover">
     <thead>
         <tr>

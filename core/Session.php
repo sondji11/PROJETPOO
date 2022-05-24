@@ -10,6 +10,11 @@ class Session{
             session_start();
         }
     }
+
+    public static function isConnect () : bool
+    {
+        return isset($_SESSION['user_connect']);
+    }
     //Ajouter une donnee dans la session
     public function set(string $key,$data){
         $_SESSION[$key]=$data;
